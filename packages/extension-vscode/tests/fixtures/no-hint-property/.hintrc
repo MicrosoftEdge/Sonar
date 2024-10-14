@@ -1,4 +1,5 @@
 {
   "browserslist": ["ie 11"],
-  "parsers": ["css", "html"]
+  "parsers": ["css", "html"],
+  "doctype": "error"
 }

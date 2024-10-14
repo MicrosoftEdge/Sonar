@@ -38,6 +38,7 @@
         "strict-transport-security": "warning",
         "stylesheet-limits": "warning",
         "validate-set-cookie-header": "warning",
-        "x-content-type-options": "warning"
+        "x-content-type-options": "warning",
+        "doctype": "error"
     }
 }

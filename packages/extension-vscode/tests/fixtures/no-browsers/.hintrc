@@ -1,3 +1,6 @@
 {
-    "extends": ["development"]
+    "extends": ["development"],
+    "hints": {
+        "doctype": "error"
+    }
 }

@@ -1,4 +1,7 @@
 {
     "extends": ["development"],
-    "browserslist": "defaults"
+    "browserslist": "defaults",
+    "hints": {
+        "doctype": "error"
+    }
 }
