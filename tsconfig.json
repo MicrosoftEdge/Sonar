@@ -5,6 +5,7 @@
         "declaration": true,
         "declarationMap": true,
         "inlineSourceMap": true,
+        "importHelpers": true,
         "lib": [
             "dom",
             "dom.iterable",
