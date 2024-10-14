@@ -29,59 +29,8 @@
             "description": "The icons member is an array of icon objects that can serve as iconic representations of the web application in various contexts.",
             "type": "array",
             "items": {
-                "type": "object",
-                "properties": {
-                    "sizes": {
-                        "description": "The sizes member is a string consisting of an unordered set of unique space-separated tokens which are ASCII case-insensitive that represents the dimensions of an image for visual media.",
-                        "oneOf": [
-                            {
-                                "type": "string",
-                                "pattern": "^[0-9 x]+$"
-                            },
-                            {
-                                "enum": [
-                                    "any"
-                                ]
-                            }
-                        ]
-                    },
-                    "src": {
-                        "description": "The src member of an image is a URL from which a user agent can fetch the icon's data.",
-                        "type": "string"
-                    },
-                    "type": {
-                        "description": "The type member of an image is a hint as to the media type of the image.",
-                        "type": "string",
-                        "pattern": "^[\\sa-z0-9\\-+;\\.=\\/]+$"
-                    },
-                    "purpose": {
-                        "type": "string",
-                        "enum": [
-                            "monochrome",
-                            "maskable",
-                            "any",
-                            "monochrome maskable",
-                            "monochrome any",
-                            "maskable monochrome",
-                            "maskable any",
-                            "any monochrome",
-                            "any maskable",
-                            "monochrome maskable any",
-                            "monochrome any maskable",
-                            "maskable monochrome any",
-                            "maskable any monochrome",
-                            "any monochrome maskable",
-                            "any maskable monochrome"
-                        ],
-                        "default": "any"
-                    }
-                },
-                "required": [
-                    "src"
-                ],
-                "additionalProperties": false
-            },
-            "minItems": 0
+                "$ref": "#/definitions/manifest_image_resource"
+            }
         },
         "lang": {
             "description": "The primary language for the values of the manifest.",
@@ -112,55 +61,8 @@
             "description": "Array of application accessible to the underlying application platform that has a relationship with the web application.",
             "type": "array",
             "items": {
-                "type": "object",
-                "properties": {
-                    "platform": {
-                        "description": "The platform it is associated to.",
-                        "enum": [
-                            "chrome_web_store",
-                            "play",
-                            "itunes",
-                            "windows"
-                        ]
-                    },
-                    "url": {
-                        "description": "The URL where the application can be found.",
-                        "type": "string",
-                        "format": "uri"
-                    },
-                    "id": {
-                        "description": "Information additional to the URL or instead of the URL, depending on the platform.",
-                        "type": "string"
-                    },
-                    "min_version": {
-                        "description": "Information about the minimum version of an application related to this web app.",
-                        "type": "string"
-                    },
-                    "fingerprints": {
-                        "description": "An array of fingerprint objects used for verifying the application.",
-                        "type": "array",
-                        "items": {
-                            "type": "object",
-                            "properties": {
-                                "type": {
-                                    "type": "string"
-                                },
-                                "value": {
-                                    "type": "string"
-                                }
-                            },
-                            "additionalProperties": false,
-                            "required": []
-                        },
-                        "minItems": 0
-                    }
-                },
-                "required": [
-                    "platform"
-                ],
-                "additionalProperties": false
-            },
-            "minItems": 0
+                "$ref": "#/definitions/external_application_resource"
+            }
         },
         "scope": {
             "description": "A string that represents the navigation scope of this web application's application context.",
@@ -174,91 +76,8 @@
             "description": "Array of shortcut items that provide access to key tasks within a web application.",
             "type": "array",
             "items": {
-                "type": "object",
-                "description": "A shortcut item represents a link to a key task or page within a web app. A user agent can use these values to assemble a context menu to be displayed by the operating system when a user engages with the web app's icon.",
-                "properties": {
-                    "name": {
-                        "description": "The name member of a shortcut item is a string that represents the name of the shortcut as it is usually displayed to the user in a context menu.",
-                        "type": "string"
-                    },
-                    "short_name": {
-                        "description": "The short_name member of a shortcut item is a string that represents a short version of the name of the shortcut. It is intended to be used where there is insufficient space to display the full name of the shortcut.",
-                        "type": "string"
-                    },
-                    "description": {
-                        "description": "The description member of a shortcut item is a string that allows the developer to describe the purpose of the shortcut.",
-                        "type": "string"
-                    },
-                    "url": {
-                        "description": "The url member of a shortcut item is a URL within scope of a processed manifest that opens when the associated shortcut is activated.",
-                        "type": "string"
-                    },
-                    "icons": {
-                        "description": "The icons member of a shortcut item serves as iconic representations of the shortcut in various contexts.",
-                        "type": "array",
-                        "items": {
-                            "type": "object",
-                            "properties": {
-                                "sizes": {
-                                    "description": "The sizes member is a string consisting of an unordered set of unique space-separated tokens which are ASCII case-insensitive that represents the dimensions of an image for visual media.",
-                                    "oneOf": [
-                                        {
-                                            "type": "string",
-                                            "pattern": "^[0-9 x]+$"
-                                        },
-                                        {
-                                            "enum": [
-                                                "any"
-                                            ]
-                                        }
-                                    ]
-                                },
-                                "src": {
-                                    "description": "The src member of an image is a URL from which a user agent can fetch the icon's data.",
-                                    "type": "string"
-                                },
-                                "type": {
-                                    "description": "The type member of an image is a hint as to the media type of the image.",
-                                    "type": "string",
-                                    "pattern": "^[\\sa-z0-9\\-+;\\.=\\/]+$"
-                                },
-                                "purpose": {
-                                    "type": "string",
-                                    "enum": [
-                                        "monochrome",
-                                        "maskable",
-                                        "any",
-                                        "monochrome maskable",
-                                        "monochrome any",
-                                        "maskable monochrome",
-                                        "maskable any",
-                                        "any monochrome",
-                                        "any maskable",
-                                        "monochrome maskable any",
-                                        "monochrome any maskable",
-                                        "maskable monochrome any",
-                                        "maskable any monochrome",
-                                        "any monochrome maskable",
-                                        "any maskable monochrome"
-                                    ],
-                                    "default": "any"
-                                }
-                            },
-                            "required": [
-                                "src"
-                            ],
-                            "additionalProperties": false
-                        },
-                        "minItems": 0
-                    }
-                },
-                "required": [
-                    "name",
-                    "url"
-                ],
-                "additionalProperties": false
-            },
-            "minItems": 0
+                "$ref": "#/definitions/shortcut_item"
+            }
         },
         "start_url": {
             "description": "Represents the URL that the developer would prefer the user agent load when the user launches the web application.",
@@ -277,8 +96,7 @@
             "type": "array",
             "items": {
                 "type": "string"
-            },
-            "minItems": 0
+            }
         },
         "description": {
             "description": "Description of the purpose of the web application",
@@ -292,189 +110,12 @@
             "description": "The screenshots member is an array of image objects represent the web application in common usage scenarios.",
             "type": "array",
             "items": {
-                "type": "object",
-                "properties": {
-                    "sizes": {
-                        "description": "The sizes member is a string consisting of an unordered set of unique space-separated tokens which are ASCII case-insensitive that represents the dimensions of an image for visual media.",
-                        "oneOf": [
-                            {
-                                "type": "string",
-                                "pattern": "^[0-9 x]+$"
-                            },
-                            {
-                                "enum": [
-                                    "any"
-                                ]
-                            }
-                        ]
-                    },
-                    "src": {
-                        "description": "The src member of an image is a URL from which a user agent can fetch the icon's data.",
-                        "type": "string"
-                    },
-                    "type": {
-                        "description": "The type member of an image is a hint as to the media type of the image.",
-                        "type": "string",
-                        "pattern": "^[\\sa-z0-9\\-+;\\.=\\/]+$"
-                    },
-                    "purpose": {
-                        "type": "string",
-                        "enum": [
-                            "monochrome",
-                            "maskable",
-                            "any",
-                            "monochrome maskable",
-                            "monochrome any",
-                            "maskable monochrome",
-                            "maskable any",
-                            "any monochrome",
-                            "any maskable",
-                            "monochrome maskable any",
-                            "monochrome any maskable",
-                            "maskable monochrome any",
-                            "maskable any monochrome",
-                            "any monochrome maskable",
-                            "any maskable monochrome"
-                        ],
-                        "default": "any"
-                    }
-                },
-                "required": [
-                    "src"
-                ],
-                "additionalProperties": false
-            },
-            "minItems": 0
+                "$ref": "#/definitions/manifest_image_resource"
+            }
         },
         "share_target": {
             "description": "Declares the application to be a web share target, and describes how it receives share data.",
-            "type": "object",
-            "properties": {
-                "action": {
-                    "description": "The URL for the web share target.",
-                    "type": "string"
-                },
-                "method": {
-                    "description": "The HTTP request method for the web share target.",
-                    "type": "string",
-                    "enum": [
-                        "GET",
-                        "POST",
-                        "get",
-                        "post"
-                    ],
-                    "default": "GET"
-                },
-                "enctype": {
-                    "description": "This member specifies the encoding in the share request.",
-                    "type": "string",
-                    "enum": [
-                        "application/x-www-form-urlencoded",
-                        "multipart/form-data",
-                        "APPLICATION/X-WWW-FORM-URLENCODED",
-                        "MULTIPART/FORM-DATA"
-                    ],
-                    "default": "application/x-www-form-urlencoded"
-                },
-                "params": {
-                    "description": "Specifies what data gets shared in the request.",
-                    "type": "object",
-                    "properties": {
-                        "title": {
-                            "description": "The name of the query parameter used for the title of the document being shared.",
-                            "type": "string"
-                        },
-                        "text": {
-                            "description": "The name of the query parameter used for the message body, made of arbitrary text.",
-                            "type": "string"
-                        },
-                        "url": {
-                            "description": "The name of the query parameter used for the URL string referring to a resource being shared.",
-                            "type": "string"
-                        },
-                        "files": {
-                            "description": "Description of how the application receives files from share requests.",
-                            "oneOf": [
-                                {
-                                    "type": "object",
-                                    "description": "Description of how the application receives files from share requests.",
-                                    "properties": {
-                                        "name": {
-                                            "description": "The name of the form field used to share the files.",
-                                            "type": "string"
-                                        },
-                                        "accept": {
-                                            "description": "Sequence of accepted MIME types or file extensions can be shared to the application.",
-                                            "oneOf": [
-                                                {
-                                                    "type": "string",
-                                                    "pattern": "^((\\..*)|(.*/.*))$"
-                                                },
-                                                {
-                                                    "type": "array",
-                                                    "items": {
-                                                        "type": "string",
-                                                        "pattern": "^((\\..*)|(.*/.*))$"
-                                                    },
-                                                    "minItems": 0
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    "required": [
-                                        "name",
-                                        "accept"
-                                    ],
-                                    "additionalProperties": false
-                                },
-                                {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "object",
-                                        "description": "Description of how the application receives files from share requests.",
-                                        "properties": {
-                                            "name": {
-                                                "description": "The name of the form field used to share the files.",
-                                                "type": "string"
-                                            },
-                                            "accept": {
-                                                "description": "Sequence of accepted MIME types or file extensions can be shared to the application.",
-                                                "oneOf": [
-                                                    {
-                                                        "type": "string",
-                                                        "pattern": "^((\\..*)|(.*/.*))$"
-                                                    },
-                                                    {
-                                                        "type": "array",
-                                                        "items": {
-                                                            "type": "string",
-                                                            "pattern": "^((\\..*)|(.*/.*))$"
-                                                        },
-                                                        "minItems": 0
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        "required": [
-                                            "name",
-                                            "accept"
-                                        ],
-                                        "additionalProperties": false
-                                    },
-                                    "minItems": 0
-                                }
-                            ]
-                        }
-                    },
-                    "additionalProperties": false,
-                    "required": []
-                }
-            },
-            "required": [
-                "action",
-                "params"
-            ],
-            "additionalProperties": false
+            "$ref": "#/definitions/share_target"
         }
     },
     "definitions": {
@@ -569,10 +210,8 @@
                                 "type": "string"
                             }
                         },
-                        "additionalProperties": false,
-                        "required": []
-                    },
-                    "minItems": 0
+                        "additionalProperties": false
+                    }
                 }
             },
             "required": [
@@ -604,59 +243,8 @@
                     "description": "The icons member of a shortcut item serves as iconic representations of the shortcut in various contexts.",
                     "type": "array",
                     "items": {
-                        "type": "object",
-                        "properties": {
-                            "sizes": {
-                                "description": "The sizes member is a string consisting of an unordered set of unique space-separated tokens which are ASCII case-insensitive that represents the dimensions of an image for visual media.",
-                                "oneOf": [
-                                    {
-                                        "type": "string",
-                                        "pattern": "^[0-9 x]+$"
-                                    },
-                                    {
-                                        "enum": [
-                                            "any"
-                                        ]
-                                    }
-                                ]
-                            },
-                            "src": {
-                                "description": "The src member of an image is a URL from which a user agent can fetch the icon's data.",
-                                "type": "string"
-                            },
-                            "type": {
-                                "description": "The type member of an image is a hint as to the media type of the image.",
-                                "type": "string",
-                                "pattern": "^[\\sa-z0-9\\-+;\\.=\\/]+$"
-                            },
-                            "purpose": {
-                                "type": "string",
-                                "enum": [
-                                    "monochrome",
-                                    "maskable",
-                                    "any",
-                                    "monochrome maskable",
-                                    "monochrome any",
-                                    "maskable monochrome",
-                                    "maskable any",
-                                    "any monochrome",
-                                    "any maskable",
-                                    "monochrome maskable any",
-                                    "monochrome any maskable",
-                                    "maskable monochrome any",
-                                    "maskable any monochrome",
-                                    "any monochrome maskable",
-                                    "any maskable monochrome"
-                                ],
-                                "default": "any"
-                            }
-                        },
-                        "required": [
-                            "src"
-                        ],
-                        "additionalProperties": false
-                    },
-                    "minItems": 0
+                        "$ref": "#/definitions/manifest_image_resource"
+                    }
                 }
             },
             "required": [
@@ -697,96 +285,7 @@
                 },
                 "params": {
                     "description": "Specifies what data gets shared in the request.",
-                    "type": "object",
-                    "properties": {
-                        "title": {
-                            "description": "The name of the query parameter used for the title of the document being shared.",
-                            "type": "string"
-                        },
-                        "text": {
-                            "description": "The name of the query parameter used for the message body, made of arbitrary text.",
-                            "type": "string"
-                        },
-                        "url": {
-                            "description": "The name of the query parameter used for the URL string referring to a resource being shared.",
-                            "type": "string"
-                        },
-                        "files": {
-                            "description": "Description of how the application receives files from share requests.",
-                            "oneOf": [
-                                {
-                                    "type": "object",
-                                    "description": "Description of how the application receives files from share requests.",
-                                    "properties": {
-                                        "name": {
-                                            "description": "The name of the form field used to share the files.",
-                                            "type": "string"
-                                        },
-                                        "accept": {
-                                            "description": "Sequence of accepted MIME types or file extensions can be shared to the application.",
-                                            "oneOf": [
-                                                {
-                                                    "type": "string",
-                                                    "pattern": "^((\\..*)|(.*/.*))$"
-                                                },
-                                                {
-                                                    "type": "array",
-                                                    "items": {
-                                                        "type": "string",
-                                                        "pattern": "^((\\..*)|(.*/.*))$"
-                                                    },
-                                                    "minItems": 0
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    "required": [
-                                        "name",
-                                        "accept"
-                                    ],
-                                    "additionalProperties": false
-                                },
-                                {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "object",
-                                        "description": "Description of how the application receives files from share requests.",
-                                        "properties": {
-                                            "name": {
-                                                "description": "The name of the form field used to share the files.",
-                                                "type": "string"
-                                            },
-                                            "accept": {
-                                                "description": "Sequence of accepted MIME types or file extensions can be shared to the application.",
-                                                "oneOf": [
-                                                    {
-                                                        "type": "string",
-                                                        "pattern": "^((\\..*)|(.*/.*))$"
-                                                    },
-                                                    {
-                                                        "type": "array",
-                                                        "items": {
-                                                            "type": "string",
-                                                            "pattern": "^((\\..*)|(.*/.*))$"
-                                                        },
-                                                        "minItems": 0
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        "required": [
-                                            "name",
-                                            "accept"
-                                        ],
-                                        "additionalProperties": false
-                                    },
-                                    "minItems": 0
-                                }
-                            ]
-                        }
-                    },
-                    "additionalProperties": false,
-                    "required": []
+                    "$ref": "#/definitions/share_target_params"
                 }
             },
             "required": [
@@ -815,78 +314,18 @@
                     "description": "Description of how the application receives files from share requests.",
                     "oneOf": [
                         {
-                            "type": "object",
-                            "description": "Description of how the application receives files from share requests.",
-                            "properties": {
-                                "name": {
-                                    "description": "The name of the form field used to share the files.",
-                                    "type": "string"
-                                },
-                                "accept": {
-                                    "description": "Sequence of accepted MIME types or file extensions can be shared to the application.",
-                                    "oneOf": [
-                                        {
-                                            "type": "string",
-                                            "pattern": "^((\\..*)|(.*/.*))$"
-                                        },
-                                        {
-                                            "type": "array",
-                                            "items": {
-                                                "type": "string",
-                                                "pattern": "^((\\..*)|(.*/.*))$"
-                                            },
-                                            "minItems": 0
-                                        }
-                                    ]
-                                }
-                            },
-                            "required": [
-                                "name",
-                                "accept"
-                            ],
-                            "additionalProperties": false
+                            "$ref": "#/definitions/share_target_files"
                         },
                         {
                             "type": "array",
                             "items": {
-                                "type": "object",
-                                "description": "Description of how the application receives files from share requests.",
-                                "properties": {
-                                    "name": {
-                                        "description": "The name of the form field used to share the files.",
-                                        "type": "string"
-                                    },
-                                    "accept": {
-                                        "description": "Sequence of accepted MIME types or file extensions can be shared to the application.",
-                                        "oneOf": [
-                                            {
-                                                "type": "string",
-                                                "pattern": "^((\\..*)|(.*/.*))$"
-                                            },
-                                            {
-                                                "type": "array",
-                                                "items": {
-                                                    "type": "string",
-                                                    "pattern": "^((\\..*)|(.*/.*))$"
-                                                },
-                                                "minItems": 0
-                                            }
-                                        ]
-                                    }
-                                },
-                                "required": [
-                                    "name",
-                                    "accept"
-                                ],
-                                "additionalProperties": false
-                            },
-                            "minItems": 0
+                                "$ref": "#/definitions/share_target_files"
+                            }
                         }
                     ]
                 }
             },
-            "additionalProperties": false,
-            "required": []
+            "additionalProperties": false
         },
         "share_target_files": {
             "type": "object",
@@ -908,8 +347,7 @@
                             "items": {
                                 "type": "string",
                                 "pattern": "^((\\..*)|(.*/.*))$"
-                            },
-                            "minItems": 0
+                            }
                         }
                     ]
                 }
@@ -921,7 +359,5 @@
             "additionalProperties": false
         }
     },
-    "additionalProperties": false,
-    "required": [],
-    "$id": "Manifest"
+    "additionalProperties": false
 }

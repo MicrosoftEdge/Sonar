@@ -92,8 +92,20 @@
         "extendsDefinition": {
             "properties": {
                 "extends": {
-                    "description": "Path to base configuration file to inherit from. Requires TypeScript version 2.1 or later.",
-                    "type": "string"
+                    "description": "Path to base configuration file to inherit from (requires TypeScript version 2.1 or later), or array of base files, with the rightmost files having the greater priority (requires TypeScript version 5.0 or later).",
+                    "oneOf": [
+                        {
+                            "default": "",
+                            "type": "string"
+                        },
+                        {
+                            "default": [],
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        }
+                    ]
                 }
             }
         },
@@ -883,6 +895,14 @@
                                 ]
                             },
                             "markdownDescription": "Specify a set of bundled library declaration files that describe the target runtime environment.\n\nSee more: https://www.typescriptlang.org/tsconfig#lib"
+                        },
+                        "moduleDetection": {
+                            "description": "Specify how TypeScript determine a file as module.",
+                            "enum": [
+                                "auto",
+                                "legacy",
+                                "force"
+                            ]
                         },
                         "strictNullChecks": {
                             "description": "When type checking, take into account `null` and `undefined`.",
