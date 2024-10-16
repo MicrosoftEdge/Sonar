@@ -1,0 +1,14 @@
+{
+    "description": {
+        "description": "Metadata description",
+        "message": "Ensure font styles use relative units to enable user stylesheet overrides"
+    },
+    "name": {
+        "description": "Metadata name",
+        "message": "Relative font units"
+    },
+    "pixelError": {
+        "description": "Metadata pixelError",
+        "message": "$1 should be defined with relative units instead of pixels."
+    }
+}

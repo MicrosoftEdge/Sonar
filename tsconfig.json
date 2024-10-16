@@ -58,6 +58,7 @@
         { "path": "packages/hint-detect-css-reflows" },
         { "path": "packages/hint-disown-opener" },
         { "path": "packages/hint-doctype" },
+        { "path": "packages/hint-font-relative-units" },
         { "path": "packages/hint-highest-available-document-mode" },
         { "path": "packages/hint-html-checker" },
         { "path": "packages/hint-http-cache" },

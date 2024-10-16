@@ -1,0 +1,13 @@
+body p {
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.1em;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.example1 .example2 {
+    font-size: 0.75em;
+    line-height: 1.5;
+    letter-spacing: 2px;
+}
