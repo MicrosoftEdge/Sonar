@@ -139,6 +139,18 @@ see the [IIS server configuration related documentation][iis config].
 
 </details>
 
+<details>
+
+<summary>How to configure NGINX</summary>
+
+You can add this header unconditionally to all responses.
+
+```nginx
+add_header X-Content-Type-Options nosniff always;
+```
+
+</details>
+
 ## How to use this hint?
 
 This package is installed automatically by webhint:
