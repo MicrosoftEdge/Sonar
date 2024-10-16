@@ -68,8 +68,11 @@ export default class HttpCacheHint implements IHint {
             'application/manifest+json',
 
             'audio/ogg',
+            'audio/opus',
             'audio/mpeg',
             'audio/mp4',
+            'audio/x-flac',
+            'audio/x-wav',
 
             'font/collection',
             'application/vnd.ms-fontobject',
@@ -79,9 +82,12 @@ export default class HttpCacheHint implements IHint {
             'font/woff',
             'font/woff2',
 
+            'image/avif',
             'image/bmp',
             'image/gif',
             'image/jpeg',
+            'image/jp2',
+            'image/jxl',
             'image/png',
             'image/svg+xml',
             'image/webp',
@@ -92,7 +98,8 @@ export default class HttpCacheHint implements IHint {
 
             'video/mp4',
             'video/ogg',
-            'video/webm'];
+            'video/webm',
+            'video/x-matroska'];
         /** The predefined patterns for file revving.*/
         const predefinedRevvingPatterns: RegExp[] = [
             /*
