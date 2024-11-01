@@ -12,7 +12,7 @@
   "description": "utils for CSS",
   "devDependencies": {
     "@hint/utils-types": "^1.2.1",
-    "ava": "^4.3.3",
+    "ava": "^6.2.0",
     "eslint": "^7.32.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-markdown": "^2.2.1",
