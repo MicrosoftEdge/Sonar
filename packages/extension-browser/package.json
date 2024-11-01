@@ -64,7 +64,7 @@
     "@typescript-eslint/parser": "^4.33.0",
     "assert": "^2.0.0",
     "ava": "^4.3.3",
-    "browserslist": "^4.21.5",
+    "browserslist": "^4.24.2",
     "copyfiles": "^2.4.1",
     "crypto-browserify": "^3.12.0",
     "css-loader": "^6.7.3",
