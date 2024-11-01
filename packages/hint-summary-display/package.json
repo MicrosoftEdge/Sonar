@@ -13,7 +13,7 @@
     "@hint/utils-fs": "^1.0.16",
     "@hint/utils-i18n": "^1.0.15",
     "@hint/utils-types": "^1.2.1",
-    "postcss-selector-parser": "^6.0.8"
+    "postcss-selector-parser": "^7.0.0"
   },
   "devDependencies": {
     "@hint/parser-css": "^3.0.39",
