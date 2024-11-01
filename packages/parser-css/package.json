@@ -13,7 +13,7 @@
     "@hint/utils-debug": "^1.0.11",
     "@hint/utils-string": "^1.0.14",
     "postcss": "^8.4.23",
-    "postcss-safe-parser": "^6.0.0"
+    "postcss-safe-parser": "^7.0.1"
   },
   "description": "webhint parser needed to analyze CSS files",
   "devDependencies": {
