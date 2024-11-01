@@ -18,7 +18,7 @@
     "@hint/utils-types": "^1.2.1",
     "is-ci": "^3.0.1",
     "lockfile": "^1.0.4",
-    "puppeteer-core": "^13.0.1"
+    "puppeteer-core": "^23.6.1"
   },
   "resolutions": {
     "node-fetch": "^2.x"
