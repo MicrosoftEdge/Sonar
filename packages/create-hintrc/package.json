@@ -21,7 +21,7 @@
   "description": "webhint's configuration file initializer package",
   "devDependencies": {
     "@types/inquirer": "^8.2.0",
-    "@types/lodash": "^4.14.194",
+    "@types/lodash": "^4.17.13",
     "@types/node": "^20.1.1",
     "@types/proxyquire": "^1.3.28",
     "@types/sinon": "^10.0.11",
