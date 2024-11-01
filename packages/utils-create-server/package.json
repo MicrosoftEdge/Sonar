@@ -2,7 +2,7 @@
   "dependencies": {
     "@hint/utils-network": "^1.0.27",
     "@hint/utils-string": "^1.0.14",
-    "express": "^4.18.2",
+    "express": "^4.21.1",
     "is-ci": "^3.0.1",
     "lodash": "^4.17.21",
     "on-headers": "^1.0.2"
