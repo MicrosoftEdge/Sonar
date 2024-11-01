@@ -72,7 +72,7 @@
     "setimmediate": "^1.0.5",
     "stream-browserify": "^3.0.0",
     "terser-webpack-plugin": "^5.3.6",
-    "typescript": "^4.5.5",
+    "typescript": "^5.6.3",
     "util.promisify": "^1.1.1",
     "webpack": "^5.76.0",
     "webpack-cli": "^4.9.1"
