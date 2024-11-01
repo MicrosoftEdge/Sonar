@@ -23,7 +23,7 @@
     "@hint/utils-json": "^1.0.28",
     "@hint/utils-tests-helpers": "^6.5.7",
     "@types/color-string": "^1.5.2",
-    "@types/node": "^20.1.1",
+    "@types/node": "^22.8.6",
     "@typescript-eslint/eslint-plugin": "^5.59.2",
     "@typescript-eslint/parser": "^4.33.0",
     "ava": "^4.3.3",

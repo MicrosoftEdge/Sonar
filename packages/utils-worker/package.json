@@ -48,7 +48,7 @@
     "@hint/utils-dom": "^2.2.4",
     "@hint/utils-i18n": "^1.0.15",
     "@hint/utils-types": "^1.2.1",
-    "@types/node": "^20.1.1",
+    "@types/node": "^22.8.6",
     "@types/puppeteer": "^5.4.5",
     "@typescript-eslint/eslint-plugin": "^5.59.2",
     "@typescript-eslint/parser": "^4.33.0",
