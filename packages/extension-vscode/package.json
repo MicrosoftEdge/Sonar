@@ -52,7 +52,7 @@
     "vscode-languageclient": "^9.0.1",
     "vscode-languageserver": "^9.0.1",
     "vscode-languageserver-textdocument": "^1.0.12",
-    "webpack": "^5.76.0",
+    "webpack": "^5.96.0",
     "webpack-cli": "^4.9.1"
   },
   "displayName": "webhint",
