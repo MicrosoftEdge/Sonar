@@ -1,4 +1,4 @@
-# No Inline CSS Styles
+# Inline CSS Styles
 
 This hint checks if the HTML is using inline CSS styles.
 
