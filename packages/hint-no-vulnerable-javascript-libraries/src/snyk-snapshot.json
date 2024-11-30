@@ -5768,12 +5768,12 @@
           ]
         },
         "language": "js",
-        "modificationTime": "2022-06-08T15:31:20.536648Z",
+        "modificationTime": "2022-09-08T11:40:22.143105Z",
         "moduleName": "dompurify",
         "packageManager": "npm",
         "packageName": "dompurify",
         "patches": [],
-        "publicationTime": "2022-06-08T15:31:20.534786Z",
+        "publicationTime": "2022-06-08T15:31:20Z",
         "references": [
           {
             "title": "Blog",
