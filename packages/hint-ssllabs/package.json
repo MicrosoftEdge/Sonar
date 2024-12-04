@@ -14,12 +14,12 @@
     "@hint/utils-i18n": "^1.0.15",
     "@hint/utils-network": "^1.0.27",
     "@hint/utils-types": "^1.2.1",
-    "got": "^11.8.5"
+    "got": "^12.2.0"
   },
   "description": "hint that that checks using SSL Labs for best practices related to the website's SSL configuration",
   "devDependencies": {
     "@hint/utils-tests-helpers": "^6.5.7",
-    "@types/node": "^20.1.1",
+    "@types/node": "^22.9.0",
     "@typescript-eslint/eslint-plugin": "^5.59.2",
     "@typescript-eslint/parser": "^4.33.0",
     "ava": "^4.3.3",

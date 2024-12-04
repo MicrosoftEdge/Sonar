@@ -22,7 +22,7 @@
     "text-table": "^0.2.0"
   },
   "devDependencies": {
-    "@types/node": "^20.1.1",
+    "@types/node": "^22.9.0",
     "@types/proxyquire": "^1.3.28",
     "@types/sinon": "^10.0.11",
     "@types/text-table": "^0.2.2",

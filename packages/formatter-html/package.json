@@ -15,14 +15,14 @@
     "@hint/utils-fs": "^1.0.16",
     "@hint/utils-i18n": "^1.0.15",
     "@hint/utils-types": "^1.2.1",
-    "ejs": "^3.1.9",
+    "ejs": "^3.1.10",
     "fs-extra": "^11.1.0",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@types/ejs": "^3.1.2",
     "@types/fs-extra": "^9.0.13",
-    "@types/node": "^20.1.1",
+    "@types/node": "^22.9.0",
     "@types/proxyquire": "^1.3.28",
     "@types/sinon": "^10.0.11",
     "@typescript-eslint/eslint-plugin": "^5.59.2",

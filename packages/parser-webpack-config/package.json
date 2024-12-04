@@ -14,7 +14,7 @@
   },
   "description": "webhint parser needed to analyze webpack config files",
   "devDependencies": {
-    "@types/node": "^20.1.1",
+    "@types/node": "^22.9.0",
     "@types/proxyquire": "^1.3.28",
     "@types/sinon": "^10.0.11",
     "@types/webpack": "^5.28.0",
@@ -31,7 +31,7 @@
     "rimraf": "^5.0.0",
     "sinon": "^13.0.1",
     "typescript": "^4.5.5",
-    "webpack": "^5.76.0"
+    "webpack": "^5.94.0"
   },
   "files": [
     "dist/src"

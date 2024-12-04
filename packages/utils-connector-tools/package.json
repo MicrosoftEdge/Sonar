@@ -22,7 +22,7 @@
   "description": "hint tools for connectors",
   "devDependencies": {
     "@hint/utils-create-server": "^3.4.27",
-    "@types/node": "^20.1.1",
+    "@types/node": "^22.9.0",
     "@types/node-fetch": "^2.x",
     "@typescript-eslint/eslint-plugin": "^5.59.2",
     "@typescript-eslint/parser": "^4.33.0",
